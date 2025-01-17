@@ -48,7 +48,10 @@ struct ToDoListView: View {
                                 viewModel.toggleCompletion(for: task)
                             } onDelete: {
                                 viewModel.deleteTask(task)
+                            } onEdit: { updatedTask in
+                                viewModel.updateTask(updatedTask)
                             }
+
                         }
                     }
                 }

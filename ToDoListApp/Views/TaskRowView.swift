@@ -11,6 +11,7 @@ struct TaskRowView: View {
     var task: Task
     var onToggle: () -> Void
     var onDelete: () -> Void
+    let onEdit: (Task) -> Void
     
     var body: some View {
         HStack {
@@ -20,10 +21,12 @@ struct TaskRowView: View {
             }
             
             VStack(alignment: .leading) {
-                Text(task.title)
-                    .strikethrough(task.isCompleted, color: .gray)
-                    .foregroundColor(task.isCompleted ? .gray : .primary)
-                    .font(.headline)
+                NavigationLink(destination: TaskDetailView(task: task, onSave: onEdit)) {
+                    Text(task.title)
+                        .strikethrough(task.isCompleted, color: .gray)
+                        .foregroundColor(task.isCompleted ? .gray : .primary)
+                        .font(.headline)
+                }
                 
                 if task.includeTime {
                     Text(task.date, style: .time)

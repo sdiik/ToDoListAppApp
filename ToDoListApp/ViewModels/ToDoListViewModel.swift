@@ -23,6 +23,12 @@ class ToDoListViewModel: ObservableObject {
         tasks.append(task)
     }
     
+    func updateTask(_ updatedTask: Task) {
+        if let index = tasks.firstIndex(where: { $0.id == updatedTask.id }) {
+            tasks[index] = updatedTask
+        }
+    }
+    
     func toggleCompletion(for task: Task) {
         if let index = tasks.firstIndex(where: { $0.id == task.id }) {
             tasks[index].isCompleted.toggle()
