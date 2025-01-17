@@ -10,9 +10,22 @@
 		0E8762F52D3944B500B865DD /* ToDoListApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoListApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		0E87631C2D395F4500B865DD /* Exceptions for "ToDoListApp" folder in "ToDoListApp" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ViewModels/AddTaskViewModel.swift,
+			);
+			target = 0E8762F42D3944B500B865DD /* ToDoListApp */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		0E8762F72D3944B500B865DD /* ToDoListApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				0E87631C2D395F4500B865DD /* Exceptions for "ToDoListApp" folder in "ToDoListApp" target */,
+			);
 			path = ToDoListApp;
 			sourceTree = "<group>";
 		};
